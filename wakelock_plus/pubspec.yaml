@@ -4,6 +4,7 @@ description: >-2
   Android, iOS, macOS, Windows, Linux, and web.
 version: 1.2.10
 repository: https://github.com/fluttercommunity/wakelock_plus/tree/main/wakelock_plus
+publish_to: none
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
@@ -23,7 +24,11 @@ dependencies:
 
   # Linux dependencies
   dbus: ^0.7.10
-  package_info_plus: ">=6.0.0 <9.0.0"
+  package_info_plus:
+    git:
+      url: https://github.com/ollghra/plus_plugins.git
+      ref: main
+      path: packages/package_info_plus/package_info_plus/
 
   # Web dependencies
   web: ">=0.5.1 <2.0.0"
